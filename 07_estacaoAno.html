@@ -7,9 +7,70 @@
     */
 
     //ENTRADA
+    const hemisfério = prompt("Informe qual hemisfério você esta (S para sul e N para norte)").toUpperCase().trim();
+    const mes = Number(prompt("Informe qual o mês atual (Digite o número do mês.)"));
+
 
     
     //PROCESSAMENTO
+// ...existing code...
+switch (hemisfério) {
+    case "S":
+        switch (mes) {
+            case 12:
+            case 1:
+            case 2:
+                alert("É verão");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                alert("É outono");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                alert("É inverno");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                alert("É primavera");
+                break;
+            default:
+                alert("Mês inválido.");
+        }
+        break;
+    case "N":
+        switch (mes) {
+            case 12:
+            case 1:
+            case 2:
+                alert("É inverno");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                alert("É primavera");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                alert("É verão");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                alert("É outono");
+                break;
+            default:
+                alert("Mês inválido.");
+        }
+        break;
+    default:
+        alert("Hemisfério inválido.");
+        break;
+}
 
 
     //SAÍDA

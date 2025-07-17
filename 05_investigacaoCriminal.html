@@ -12,9 +12,71 @@
     */
 
     //ENTRADA
+    alert("Olá, faremos 5 perguntas a você, respond com S para sim e N para não.")
+    const pergunta1 = prompt("Telefonou para a vítima?").toUpperCase().trim();
+    const pergunta2 = prompt("Esteve no local do crime?").toUpperCase().trim();
+    const pergunta3 = prompt( "Mora perto da vítima?").toUpperCase().trim();
+    const pergunta4 = prompt("Devia para a vítima?").toUpperCase().trim();
+    const pergunta5 = prompt("Já trabalhou com a vítima?").toUpperCase().trim();
 
     
     //PROCESSAMENTO
+    let respostasPositivas = 0;
+    switch (pergunta1) {
+        case "S":
+            respostasPositivas++;
+            break;
+        default:
+            break;
+    }
+    switch (pergunta2) {
+        case "S":
+            respostasPositivas++;
+            break;
+    
+        default:
+            break;
+    }
+    switch (pergunta3) {
+        case "S":
+            respostasPositivas++;
+            break;
+    
+        default:
+            break;
+    }
+    switch (pergunta4) {
+        case "S":
+            respostasPositivas++;
+            break;
+    
+        default:
+            break;
+    }
+    switch (pergunta5) {
+        case "S":
+            respostasPositivas++;
+            break;
+    
+        default:
+            break;
+    }
+   switch (respostasPositivas) {
+    case 2:
+        alert("Suspeita")
+        break;
+        case 3:
+        case 4:
+            alert("Cúmplice")
+            break;
+            case 5:
+                alert("Assasino")
+                break;
+   
+    default:
+        alert("Inocente")
+        break;
+   }
 
 
     //SAÍDA

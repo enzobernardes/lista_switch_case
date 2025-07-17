@@ -9,9 +9,64 @@
     */
 
     //ENTRADA
+    const numero1 = Number(prompt("Informe um número."));
+    const numero2 =  Number(prompt("Informe o segundo número."));
+    let operacao = prompt("Informe a operação desejada (+ para adição, - para subtração, * para multiplicação e / para divisão).");
+    let resultadoFinal = 0;
+    let parouImpar = "";
+    let positivoouNegativo = "";
+    let inteiroouDecimal = "";
 
 
     //PROCESSAMENTO
+    switch (operacao) {
+        case "+":
+            resultadoFinal = numero1 + numero2
+            break;
+            case "-":
+                resultadoFinal = numero1 - numero2
+                break;
+                case "*":
+                    resultadoFinal = numero1 * numero2
+                    break;
+                    case "/":
+                        resultadoFinal = numero1 / numero2
+                    break;
+    
+        default:
+            break;
+    }
+    switch (resultadoFinal % 2 === 0) {
+        case true:
+            parouImpar = "Par";
+            break;
+    
+        default:
+            parouImpar = "Ímpar";
+            break;
+    }
+    switch (Number.isInteger(resultadoFinal)) {
+        case true:
+            inteiroouDecimal = "Inteiro";
+            break;
+    
+        default:
+            inteiroouDecimal = "Decimal";
+            break;
+    }
+    switch (true) {
+        case (resultadoFinal > 0):
+            positivoouNegativo = "Positivo";
+        break;
+        case (resultadoFinal < 0):
+        positivoouNegativo = "Negativo";
+        break;
+        default:
+            positivoouNegativo = "Zero";
+            break;
+    }
+    alert(`Resultado: ${resultadoFinal}
+O número é ${parouImpar}, ${positivoouNegativo} e ${inteiroouDecimal}.`)
 
     
     //SAÍDA
